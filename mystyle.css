@@ -1,0 +1,129 @@
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background-image: url('https://cdn.pixabay.com/photo/2022/11/30/10/51/space-7626470_960_720.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* heder */
+header {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  background: rgba(0, 0, 0, 0.4); /*transparent background */
+  backdrop-filter: blur(1px); /* glass effect */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+}
+
+h1 {
+  color: #002fff;
+  font-size: 2rem;
+  text-shadow: 0 0 8px #002fff;
+}
+
+/* Form section */
+.form-section {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 500px;
+  background: rgba(0, 0, 0, 0.4); /* transparent to see the background */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+}
+
+input, textarea {
+  background-color: rgba(30, 30, 30, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  resize: none;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #bbb;
+}
+
+button {
+  background-color: #002fff;
+  border: none;
+  color: black;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #002fff;
+  box-shadow: 0 0 10px #002fff;
+}
+
+/* Note container */
+.notes-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  width: 90%;
+  max-width: 900px;
+  margin-bottom: 50px;
+}
+
+/* Individual note */
+.note {
+  background: rgba(0, 0, 0, 0.5); /* transparent */
+  backdrop-filter: blur(4px);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.note:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 17, 255, 0.814);
+}
+
+.note h3 {
+  color: #002fff;
+  margin-bottom: 8px;
+  text-shadow: 0 0 5px #002fff;
+}
+
+.note p {
+  color: #e0e0e0;
+  font-size: 0.95rem;
+}
+
+/* delete button */
+.delete-btn {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  color: #ff5252;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.delete-btn:hover {
+  color: #ff1744;
+  transform: scale(1.2);
+}
